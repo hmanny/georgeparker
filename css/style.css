@@ -148,13 +148,17 @@ body {
     height: 100%;
 }
 
-p {
+p,
+ul {
     line-height: 1.6;
     font-size: 15px
 }
 
 h1 {
     padding-bottom: 0.5em;
+    font-size: 31px;
+    font-family: 'antoniobold', sans-serif;
+    text-transform: uppercase;
 }
 
 .contain {
@@ -173,7 +177,64 @@ h1 {
     top: 50%;
     transform: translateY(-50%);
     margin: 0;
-    padding: 0 4em;
+    padding: 0;
+}
+
+.link {
+    text-align: right;
+    padding-right: 40px;
+    font-family: "LatoBlack";
+    font-style: italic;
+    text-transform: uppercase;
+}
+
+.link a {
+    color: darkblue;
+}
+
+.desk {
+    display: none;
+}
+
+.menu_button {
+    position: fixed;
+    margin-top: 65px;
+    right: 0;
+    font-size: 35px;
+    color: white;
+    background: none;
+    border: none;
+    outline: none;
+    z-index: 901;
+}
+
+nav.mob {
+    position: fixed;
+    display: none;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    text-align: right;
+    padding-top: 120px;
+    text-transform: uppercase;
+}
+
+.mob .menu li {
+    padding: 0.5em 10px;
+}
+
+.mob .menu li a {
+    color: #eee;
+    font-family: "antoniobold", sans-serif;
+    text-decoration: none;
+}
+
+.half_full {
+    display: block;
+    height: 100%;
+    min-height: 600px;
+    background-size: cover;
 }
 
 .banner {
@@ -200,55 +261,110 @@ h1 {
 .logo {
     position: relative;
     margin: 0;
-    top: 75px;
+    top: 65px;
     max-width: 75%;
 }
 
-.desk {
-    display: none;
-}
-
-.menu_button {
-    position: fixed;
-    margin-top: 70px;
-    right: 0;
-    font-size: 40px;
-    color: white;
-    background: none;
-    border: none;
-}
-
-.about {
-    display: block;
-    height: 100%;
-}
-
-.about .left {
+.left {
     display: inline-block;
     width: 100%;
     height: 100%;
     margin: 0;
     background-image: url(/img/biobg.jpg);
     background-size: cover;
-    padding: 0;
 }
 
-about. right {
+.left p {
+    padding: 0 40px;
+}
+
+.right {
     display: none;
     padding: 0;
 }
 
-.about .left h1 {
+.left h1 {
     font-size: 31px;
     font-family: 'antoniobold', sans-serif;
     text-transform: uppercase;
+    padding-left: 40px;
 }
 
-.about .left p {
+.left p {
     font-family: 'Lato'
 }
 
-@media (min-width: 679px) {}
+.player_info {
+    background-image: url(/img/infobanner.jpg);
+    background-position: bottom;
+}
+
+.player_info ul {
+    text-align: center;
+    margin: 0 auto;
+    width: 300px;
+    max-width: 100%;
+    font-family: "antonioregular", sans-serif;
+    font-size: 18px;
+}
+
+.player_info h1 {
+    font-size: 31px;
+    opacity: 0.75;
+}
+
+.events {
+    background-image: url(/img/eventsbackground.jpg);
+}
+
+.events h1 {
+    text-align: center;
+    padding-top: 60px;
+}
+
+.gallery {
+    background-image: url(/img/gallerybg.jpg);
+}
+
+.gallery h1 {
+    text-align: center;
+    padding-top: 60px;
+}
+
+.sponsers {
+    background-image: url(/img/sponserbg.jpg);
+}
+
+.sponsers {
+    text-align: center;
+}
+
+.sponsers h1 {
+    padding-bottom: 0;
+    padding-top: 40px;
+}
+
+.sponsers li {
+    width: 100%;
+    padding: 2em 0;
+}
+
+.sponsers li img {
+    height: 30px;
+}
+
+@media (min-width: 679px) {
+    .sponsers ul {
+        display: block;
+        margin: 0 auto;
+    }
+    .sponsers li {
+        display: inline-block;
+        width: 240px;
+        padding: 2em 1em;
+        margin: 0;
+    }
+}
 
 @media (min-width: 1024px) {
     .banner h1 {
@@ -281,16 +397,17 @@ about. right {
     .menu_button {
         display: none;
     }
-    .about {
+    .half_full {
         height: 50%;
         padding: 0;
-        position: relative;
+        min-height: 0;
     }
-    .about .left {
+    .left {
         width: 40%;
         float: left;
     }
-    .about .right {
+    .right {
+        display: inline;
         height: 100%;
         float: right;
         width: 60%;
@@ -298,9 +415,18 @@ about. right {
         background-image: url(/img/about-right.jpg);
         background-size: cover;
     }
+    .player_info ul {
+        text-align: left;
+    }
+    .player_info h1 {
+        display: none;
+    }
 }
 
 @media (min-width: 1250px) {
+    .banner h1 {
+        width: 35%;
+    }
     .banner h1 span {
         font-size: 46px;
     }
