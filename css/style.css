@@ -146,6 +146,7 @@ body {
     color: #eee;
     margin: 0;
     height: 100%;
+    text-shadow: 0 0 2px rgba(255, 255, 255, 0.3);
 }
 
 header {
