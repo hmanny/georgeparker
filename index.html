@@ -5,8 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title></title>
-    <link rel="stylesheet" href="/css/style.css">
-
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -76,32 +75,38 @@
     </div>
     <div class="events half_full">
         <div class="contain">
-
+           
             <h1>Upcoming Events</h1>
 
             <div class="event_box">
                 <div class="date">
-                    <div><span>AUG</span> <span>03</span>
+                    <div class="center-vert"><div>AUG</div> <div>03</div>
                     </div>
                 </div>
                 <div class="event_title">
+                    <div class="center-vert">
                     <h3>MELBOURNE, AUSTRALIA</h3>
                     <h2>VICTORIAN OPEN 2015</h2>
+                    </div>
                 </div>
             </div>
             <div class="event_box">
                 <div class="date">
-                    <div><span>JULY</span> <span>O2</span>
+                    <div class="center-vert"><div>JULY</div> <div>O2</div>
                     </div>
                 </div>
                 <div class="event_title">
+                    <div class="center-vert">
                     <h3>BOGOTA, COLUMBIA</h3>
                     <h2>ABIERTO COLOMBIANO DE SQUASH CLUB EL NOGAL 2015</h2>
+                        </div>
                 </div>
             </div>
-            <div class="link"><a href="#">More Events >> </a>
-            </div>
+           <div class="link"><a href="#">More Events >> </a>
         </div>
+            </div>
+         
+            
 
     </div>
     <div class="gallery two_thirds_full">
@@ -157,7 +162,7 @@
         </div>
     </footer>
     <nav class="mob">
-        <ul class="menu" id="mobile-menu">
+        <ul class="center-vert menu" id="mobile-menu">
             <li id="menu0" class="liLinkActive"><a title="Home" href="#">Home</a>
             </li>
             <li id="menu1" class="nodiv"><a title="About us" href="#">Biography</a>
@@ -182,14 +187,17 @@
         $(".menu_button").on("click", function() {
             if (menu_up === false) {
                 $(".mob").fadeIn(200);
+                $(this).html("&#x2716;")
                 menu_up = true;
             } else {
                 $(".mob").fadeOut(200);
+                $(this).html("&#9776;")
                 menu_up = false;
             }
         });
         $(window).on('resize', function() {
             $(".mob").fadeOut();
+            $(".menu_button").html("&#9776;");
             menu_up = false;
         });
 
