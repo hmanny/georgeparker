@@ -45,79 +45,81 @@
 
 
     <div class="about half_full">
-        <div class="left">
-            <div class="center-vert">
-                <h1>George Parker</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Iaculis accumsan. Cras bibendum a nisi eu euismod. Praesent tristique convallis diam eget molestie.</p>
-                <br>
-                <p>Nam feugiat cursus sem, nec sollicitudin sapien facilisis quis. Vestibulum dapibus in orci eget convallis. Pellentesque tincidunt ipsum dui.</p>
-                <br>
-                <div class="link"><a href="#">BIOGRAPHY >></a>
-                </div>
-            </div>
-        </div>
-        <div class="right"></div>
 
+        <h1>George Parker</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Iaculis accumsan. Cras bibendum a nisi eu euismod. Praesent tristique convallis diam eget molestie.</p>
+        <br>
+        <p>Nam feugiat cursus sem, nec sollicitudin sapien facilisis quis. Vestibulum dapibus in orci eget convallis. Pellentesque tincidunt ipsum dui.<span class="link"><a href="#">BIOGRAPHY >></a></span>
+        </p>
+
+        <img src="img/about-right.jpg">
     </div>
     <div class="player_info half_full">
-
-        <ul class="contain center-vert">
-            <li>
-                <h1>PLAYER INFO</h1>
-            </li>
-            <li><span>World Ranking:</span> 135</li>
-            <li><span>Birthplace:</span> Leicester</li>
-            <li><span>Height:</span> 187cm</li>
-            <li><span>Weight:</span> 84KG</li>
-            <li><span>Coach:</span> Rob Owen</li>
-            <li><span>Titles:</span> European U-19 CHAMPION</li>
-        </ul>
+        <div class="contain">
+            <ul>
+                <li>
+                    <h1>PLAYER INFO</h1>
+                </li>
+                <li><span>World Ranking:</span> 135</li>
+                <li><span>Birthplace:</span> Leicester</li>
+                <li><span>Height:</span> 187cm</li>
+                <li><span>Weight:</span> 84KG</li>
+                <li><span>Coach:</span> Rob Owen</li>
+                <li><span>Titles:</span> European U-19 CHAMPION</li>
+            </ul>
+            <img src="img/george.png">
+        </div>
     </div>
     <div class="events half_full">
         <div class="contain">
-           
+
             <h1>Upcoming Events</h1>
 
             <div class="event_box">
                 <div class="date">
-                    <div class="center-vert"><div>AUG</div> <div>03</div>
+                    <div class=" ">
+                        <div>AUG</div>
+                        <div>03</div>
                     </div>
                 </div>
                 <div class="event_title">
-                    <div class="center-vert">
-                    <h3>MELBOURNE, AUSTRALIA</h3>
-                    <h2>VICTORIAN OPEN 2015</h2>
+                    <div class=" ">
+                        <h3>MELBOURNE, AUSTRALIA</h3>
+                        <h2>VICTORIAN OPEN 2015</h2>
                     </div>
                 </div>
             </div>
             <div class="event_box">
                 <div class="date">
-                    <div class="center-vert"><div>JULY</div> <div>O2</div>
+                    <div class=" ">
+                        <div>JULY</div>
+                        <div>O2</div>
                     </div>
                 </div>
                 <div class="event_title">
-                    <div class="center-vert">
-                    <h3>BOGOTA, COLUMBIA</h3>
-                    <h2>ABIERTO COLOMBIANO DE SQUASH CLUB EL NOGAL 2015</h2>
-                        </div>
+                    <div class=" ">
+                        <h3>BOGOTA, COLUMBIA</h3>
+                        <h2>ABIERTO COLOMBIANO DE SQUASH CLUB EL NOGAL 2015</h2>
+                    </div>
                 </div>
             </div>
-           <div class="link"><a href="#">More Events >> </a>
-        </div>
+            <div class="link"><a href="#">More Events >> </a>
             </div>
-         
-            
+        </div>
+
+
 
     </div>
     <div class="gallery two_thirds_full">
         <h1>
         george's latest photos
         </h1>
-        <div class="link"><a href="#">Gallery >></a></div>
+        <div class="link"><a href="#">Gallery >></a>
+        </div>
     </div>
     <div class="sponsers third_full">
 
-        <ul class="center-vert contain">
+        <ul class="  contain">
             <li>
                 <h1>George's Sponsers</h1>
             </li>
@@ -162,7 +164,7 @@
         </div>
     </footer>
     <nav class="mob">
-        <ul class="center-vert menu" id="mobile-menu">
+        <ul class="menu" id="mobile-menu">
             <li id="menu0" class="liLinkActive"><a title="Home" href="#">Home</a>
             </li>
             <li id="menu1" class="nodiv"><a title="About us" href="#">Biography</a>
@@ -184,7 +186,7 @@
     <script src="/jquery-2.1.4.min.js"></script>
     <script>
         var menu_up = false;
-        $(".menu_button").on("click", function() {
+        $(".menu_button").on("click", function () {
             if (menu_up === false) {
                 $(".mob").fadeIn(200);
                 $(this).html("&#x2716;")
@@ -195,12 +197,11 @@
                 menu_up = false;
             }
         });
-        $(window).on('resize', function() {
+        $(window).on('resize', function () {
             $(".mob").fadeOut();
             $(".menu_button").html("&#9776;");
             menu_up = false;
         });
-
     </script>
 </body>
 
