@@ -1,5 +1,7 @@
 /*
 ****************************** CSS RESET**************************/
+
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -93,6 +95,7 @@ video {
     font: inherit;
     vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
 
 article,
@@ -108,21 +111,17 @@ nav,
 section {
     display: block;
 }
-
 body {
     line-height: 1;
 }
-
 ol,
 ul {
     list-style: none;
 }
-
 blockquote,
 q {
     quotes: none;
 }
-
 blockquote:before,
 blockquote:after,
 q:before,
@@ -130,48 +129,49 @@ q:after {
     content: '';
     content: none;
 }
-
 table {
     border-collapse: collapse;
     border-spacing: 0;
 }
+
 /*
 ****************************** END CSS RESET**************************/
 
 html {
     height: 100%;
 }
-
 body {
     color: #eee;
     margin: 0;
     height: 100%;
 }
-
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+}
 p,
 ul {
     line-height: 1.6;
     font-size: 15px
 }
-
 h1 {
     padding-bottom: 0.5em;
     font-size: 31px;
     font-family: 'antoniobold', sans-serif;
     text-transform: uppercase;
 }
-
 .contain {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 1em;
 }
-
 .full-height {
     height: 100%;
     background-size: cover;
 }
-
 .center-vert {
     position: relative;
     top: 50%;
@@ -179,23 +179,20 @@ h1 {
     margin: 0;
     padding: 0;
 }
-
 .link {
     text-align: right;
     padding-right: 40px;
     font-family: "LatoBlack";
     font-style: italic;
     text-transform: uppercase;
+    font-size: 18px;
 }
-
 .link a {
-    color: darkblue;
+    color: #0e8eb8;
 }
-
 .desk {
     display: none;
 }
-
 .menu_button {
     position: fixed;
     margin-top: 65px;
@@ -207,7 +204,6 @@ h1 {
     outline: none;
     z-index: 901;
 }
-
 nav.mob {
     position: fixed;
     display: none;
@@ -218,29 +214,27 @@ nav.mob {
     text-align: right;
     padding-top: 120px;
     text-transform: uppercase;
+    z-index: 899;
 }
-
 .mob .menu li {
     padding: 0.5em 10px;
 }
-
 .mob .menu li a {
     color: #eee;
     font-family: "antoniobold", sans-serif;
     text-decoration: none;
 }
-
-.half_full {
+.half_full,
+.third_full,
+.two_thirds_full {
     display: block;
     height: 100%;
-    min-height: 600px;
+    min-height: 550px;
     background-size: cover;
 }
-
 .banner {
     background-image: url(/img/20th-Commonwealth-Games---014.jpg);
 }
-
 .banner h1 {
     font-family: 'antoniobold', serif;
     position: absolute;
@@ -249,7 +243,6 @@ nav.mob {
     width: 50%;
     font-size: 40px;
 }
-
 .banner h1 span {
     font-family: 'antoniolight', serif;
     text-transform: uppercase;
@@ -257,14 +250,12 @@ nav.mob {
     font-weight: normal;
     font-size: 30px;
 }
-
 .logo {
     position: relative;
     margin: 0;
     top: 65px;
     max-width: 75%;
 }
-
 .left {
     display: inline-block;
     width: 100%;
@@ -273,99 +264,102 @@ nav.mob {
     background-image: url(/img/biobg.jpg);
     background-size: cover;
 }
-
 .left p {
     padding: 0 40px;
 }
-
 .right {
     display: none;
     padding: 0;
 }
-
 .left h1 {
     font-size: 31px;
     font-family: 'antoniobold', sans-serif;
     text-transform: uppercase;
     padding-left: 40px;
 }
-
 .left p {
     font-family: 'Lato'
 }
-
 .player_info {
-    background-image: url(/img/infobanner.jpg);
+    background-color: #0e8eb8;
     background-position: bottom;
 }
-
 .player_info ul {
     text-align: center;
     margin: 0 auto;
-    width: 300px;
+    width: 340px;
     max-width: 100%;
-    font-family: "antonioregular", sans-serif;
+    font-family: "Lato", sans-serif;
     font-size: 18px;
+    text-transform: uppercase;
 }
-
+.player_info ul li span {
+    font-weight: bold;
+    padding-right: 0.5em;
+}
 .player_info h1 {
     font-size: 31px;
     opacity: 0.75;
 }
-
 .events {
     background-image: url(/img/eventsbackground.jpg);
 }
-
 .events h1 {
     text-align: center;
     padding-top: 60px;
 }
-
 .gallery {
     background-image: url(/img/gallerybg.jpg);
 }
-
 .gallery h1 {
     text-align: center;
     padding-top: 60px;
 }
-
+.gallery .link {
+    text-align: center;
+}
+.gallery .link a {
+    color: #eee;
+}
 .sponsers {
     background-image: url(/img/sponserbg.jpg);
 }
-
 .sponsers {
     text-align: center;
 }
-
 .sponsers h1 {
     padding-bottom: 0;
     padding-top: 40px;
 }
-
 .sponsers li {
     width: 100%;
     padding: 2em 0;
 }
-
-.sponsers li img {
-    height: 30px;
+.sponsers .link a {
+    color: #eee;
 }
-
+footer ul {
+    display: none;
+}
 @media (min-width: 679px) {
     .sponsers ul {
         display: block;
         margin: 0 auto;
+        text-align: center;
     }
     .sponsers li {
         display: inline-block;
         width: 240px;
-        padding: 2em 1em;
+        padding: 2em 38px;
         margin: 0;
     }
+    .sponsers li:first-child {
+        padding-left: 0;
+    }
+    .sponsers li:nth-child(4) {
+        padding-right: 0;
+    }
 }
-
 @media (min-width: 1024px) {
     .banner h1 {
         font-size: 77px;
@@ -397,10 +391,20 @@ nav.mob {
     .menu_button {
         display: none;
     }
+    .half_full,
+    .third_full,
+    .two_thirds_full {
+        padding: 0;
+        min-height: 400px;
+    }
     .half_full {
         height: 50%;
-        padding: 0;
-        min-height: 0;
+    }
+    .third_full {
+        height: 33%;
+    }
+    .two_thirds_full {
+        height: 66%;
     }
     .left {
         width: 40%;
@@ -415,81 +419,115 @@ nav.mob {
         background-image: url(/img/about-right.jpg);
         background-size: cover;
     }
+    .player_info {
+        background-image: url(/img/infobanner.jpg);
+    }
     .player_info ul {
         text-align: left;
     }
     .player_info h1 {
         display: none;
     }
-}
-
-@media (min-width: 1250px) {
-    .banner h1 {
-        width: 35%;
+    footer {
+        background-color: #0e0e0e;
+        font-family: 'lato', sans-serif;
     }
-    .banner h1 span {
-        font-size: 46px;
+    footer ul {
+        display: block;
+        text-align: center;
+        border-bottom: 1px solid #333;
     }
-}
-/*fonts*/
-
-@font-face {
-    font-family: 'antoniobold';
-    src: url('/fonts/antonio-bold-webfont.eot');
-    src: url('/fonts/antonio-bold-webfont.eot?#iefix') format('embedded-opentype'), url('/fonts/antonio-bold-webfont.woff') format('woff'), url('/fonts/antonio-bold-webfont.ttf') format('truetype'), url('/fonts/antonio-bold-webfont.svg#antoniobold') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'antoniolight';
-    src: url('/fonts/antonio-light-webfont.eot');
-    src: url('/fonts/antonio-light-webfont.eot?#iefix') format('embedded-opentype'), url('/fonts/antonio-light-webfont.woff') format('woff'), url('/fonts/antonio-light-webfont.ttf') format('truetype'), url('/fonts/antonio-light-webfont.svg#antoniolight') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'antonioregular';
-    src: url('/fonts/antonio-regular-webfont.eot');
-    src: url('/fonts/antonio-regular-webfont.eot?#iefix') format('embedded-opentype'), url('/fonts/antonio-regular-webfont.woff') format('woff'), url('/fonts/antonio-regular-webfont.ttf') format('truetype'), url('/fonts/antonio-regular-webfont.svg#antonioregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-/* Generated by Font Squirrel (http://www.fontsquirrel.com) on March 26, 2014 */
-/* Webfont: Lato-BlackItalic */
-
-@font-face {
-    font-family: 'LatoBlack';
-    src: url('/fonts/Lato-BlackItalic.eot');
-    /* IE9 Compat Modes */
+    footer ul li {
+        display: inline-block;
+        font-family: 'antoniobold', sans-serif;
+        padding: 45px 40px 25px;
+    }
+    footer ul li:first-child {
+        padding-left: 0;
+    }
+    footer ul li:last-child {
+        padding-right: 0;
+    }
+    footer ul li a {
+        color: #eee;
+        text-decoration: none;
+    }
+    footer ul li a:hover {
+        text-decoration: underline;
+    }
     
-    src: url('/fonts/Lato-BlackItalic.eot?#iefix') format('embedded-opentype'),
-    /* IE6-IE8 */
-    
-    url('/fonts/Lato-BlackItalic.woff') format('woff'),
-    /* Modern Browsers */
-    
-    url('/fonts/Lato-BlackItalic.ttf') format('truetype');
-    font-style: italic;
-    font-weight: normal;
-    text-rendering: optimizeLegibility;
-}
-/* Webfont: Lato-Regular */
-
-@font-face {
-    font-family: 'Lato';
-    src: url('/fonts/Lato-Regular.eot');
-    /* IE9 Compat Modes */
-    
-    src: url('/fonts/Lato-Regular.eot?#iefix') format('embedded-opentype'),
-    /* IE6-IE8 */
-    
-    url('/fonts/Lato-Regular.woff') format('woff'),
-    /* Modern Browsers */
-    
-    url('/fonts/Lato-Regular.ttf') format('truetype');
-    font-style: normal;
-    font-weight: normal;
-    text-rendering: optimizeLegibility;
-}
+    footer span {
+        display: inline-block;
+        padding 40px;
+        width: 50%;
+        margin: 20px 0;
+        vertical-align: middle;
+        
+    }
+    footer span:last-child {
+        display: inline-block;
+        width: 49%;
+        text-align: right;
+        
+    }
+    footer span:last-child img {
+        width: 200px; 
+    }
+    @media (min-width: 1250px) {
+        .banner h1 {
+            width: 35%;
+        }
+        .banner h1 span {
+            font-size: 46px;
+        }
+        footer ul li {
+            padding: 45px 55px 25px;
+        }
+    }
+    /*fonts*/
+    @font-face {
+        font-family: 'antoniobold';
+        src: url('/fonts/antonio-bold-webfont.eot');
+        src: url('/fonts/antonio-bold-webfont.eot?#iefix') format('embedded-opentype'), url('/fonts/antonio-bold-webfont.woff') format('woff'), url('/fonts/antonio-bold-webfont.ttf') format('truetype'), url('/fonts/antonio-bold-webfont.svg#antoniobold') format('svg');
+        font-weight: normal;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: 'antoniolight';
+        src: url('/fonts/antonio-light-webfont.eot');
+        src: url('/fonts/antonio-light-webfont.eot?#iefix') format('embedded-opentype'), url('/fonts/antonio-light-webfont.woff') format('woff'), url('/fonts/antonio-light-webfont.ttf') format('truetype'), url('/fonts/antonio-light-webfont.svg#antoniolight') format('svg');
+        font-weight: normal;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: 'antonioregular';
+        src: url('/fonts/antonio-regular-webfont.eot');
+        src: url('/fonts/antonio-regular-webfont.eot?#iefix') format('embedded-opentype'), url('/fonts/antonio-regular-webfont.woff') format('woff'), url('/fonts/antonio-regular-webfont.ttf') format('truetype'), url('/fonts/antonio-regular-webfont.svg#antonioregular') format('svg');
+        font-weight: normal;
+        font-style: normal;
+    }
+    /* Generated by Font Squirrel (http://www.fontsquirrel.com) on March 26, 2014 */
+    /* Webfont: Lato-BlackItalic */
+    @font-face {
+        font-family: 'LatoBlack';
+        src: url('/fonts/Lato-BlackItalic.eot');
+        /* IE9 Compat Modes */
+        src: url('/fonts/Lato-BlackItalic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+        url('/fonts/Lato-BlackItalic.woff') format('woff'), /* Modern Browsers */
+        url('/fonts/Lato-BlackItalic.ttf') format('truetype');
+        font-style: italic;
+        font-weight: normal;
+        text-rendering: optimizeLegibility;
+    }
+    /* Webfont: Lato-Regular */
+    @font-face {
+        font-family: 'Lato';
+        src: url('/fonts/Lato-Regular.eot');
+        /* IE9 Compat Modes */
+        src: url('/fonts/Lato-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+        url('/fonts/Lato-Regular.woff') format('woff'), /* Modern Browsers */
+        url('/fonts/Lato-Regular.ttf') format('truetype');
+        font-style: normal;
+        font-weight: normal;
+        text-rendering: optimizeLegibility;
+    }

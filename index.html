@@ -10,7 +10,8 @@
 </head>
 
 <body>
-    <div class="full-height banner">
+
+    <header>
         <div class="contain">
             <img class="logo" src="img/logo.png">
             <button class="menu_button">&#9776;</button>
@@ -34,11 +35,14 @@
                     </li>
                 </ul>
             </nav>
+        </div>
+    </header>
+    <div class="full-height banner">
+        <div class="contain">
             <h1><span>George Parker</span><br>
         European Junior Champion</h1>
         </div>
     </div>
-
 
 
     <div class="about half_full">
@@ -100,14 +104,15 @@
         </div>
 
     </div>
-    <div class="gallery half_full">
+    <div class="gallery two_thirds_full">
         <h1>
         george's latest photos
         </h1>
+        <div class="link"><a href="#">Gallery >></a></div>
     </div>
-    <div class="sponsers half_full">
+    <div class="sponsers third_full">
 
-        <ul class="center-vert">
+        <ul class="center-vert contain">
             <li>
                 <h1>George's Sponsers</h1>
             </li>
@@ -145,8 +150,11 @@
             </li>
             <li><a href="#">Contact</a>
             </li>
-
         </ul>
+        <div class="contain">
+            <span>&copy; George Parker 2015 | Website designed by The Smarter Web Company</span>
+            <span><img src="/img/logo.png"></span>
+        </div>
     </footer>
     <nav class="mob">
         <ul class="menu" id="mobile-menu">
@@ -171,7 +179,7 @@
     <script src="/jquery-2.1.4.min.js"></script>
     <script>
         var menu_up = false;
-        $(".menu_button").on("click", function () {
+        $(".menu_button").on("click", function() {
             if (menu_up === false) {
                 $(".mob").fadeIn(200);
                 menu_up = true;
@@ -180,6 +188,11 @@
                 menu_up = false;
             }
         });
+        $(window).on('resize', function() {
+            $(".mob").fadeOut();
+            menu_up = false;
+        });
+
     </script>
 </body>
 
